@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+.custom-container {
+  width: 90vw; /* 80% of the viewport width */
+  height: 138vh; /* 90% of the viewport height */
+}
+
+.container-color{
+  background-color: #f6f6f6;
+}
+
+.container-wid-one{
+  width: 45.6vw;
+}
+
+.container-wid-two{
+  width: 22.3vw;
+}
+
+.height-nav{
+  height: 1012px;
+}
+
+.category-memo{
+  height: 385px;
+}

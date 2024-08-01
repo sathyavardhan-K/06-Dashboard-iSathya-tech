@@ -5,5 +5,8 @@
         "width": 3,
         "height": 3
     },
-    "mapping": []
+    "mapping": [],
+    "fileName": "manifest.json",
+    "id": "3d6a102d-48fc-4af5-9a39-55362c7839ff",
+    "proxyId":"7b92eede-dc58-4c86-9217-d785f193d3bb"
 }
