@@ -17,7 +17,7 @@ const CategoryMemo = () => {
 
   return (
     <div className="bg-white p-4 rounded-lg category-memo">
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mt-12">
         <h2 className="text-lg font-semibold">Category Memo</h2>
         <span className="text-sm text-gray-500 relative">Last 7 Days <span><img src={Down} alt="arrow" className='ml-20 -mt-5' /></span></span>
       </div>

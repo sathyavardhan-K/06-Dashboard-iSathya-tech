@@ -10,6 +10,7 @@ import Sidenav from './components/Sidenav';
 import Arrow from './images/arrow.svg';
 import Middle from './components/middle';
 import Last from './components/Last';
+import Profile from './images/boy.png';
 
 function App() {
   return (
@@ -41,10 +42,10 @@ function App() {
                     <img src={Search} alt="search" className='bg-white rounded-full p-3 ml-5 cursor-pointer' />
                     <img src={Mail} alt="search" className='bg-white rounded-full p-3 ml-5 mr-5 cursor-pointer' /> 
                     
-                    <div className='grid grid-cols-2 border-b-0 rounded-full bg-white w-56 p-3 h-16'>
+                    <div className='grid grid-cols-2 border-b-0 rounded-full bg-white w-56 p-3 h-16 cursor-pointer'>
                     
-                      <img src={Avatar} alt="avatar" className='w-10'/>
-                      <div className='-ml-16 cursor-pointer'>
+                      <img src={Profile} alt="avatar" className='w-10'/>
+                      <div className='-ml-16'>
                         <h1 className='font-bold ml-3'>Ray Rona Epiya</h1>
                         <p className='text-gray-400 ml-3'>ray@example.com</p>  
                         <img src={Down} alt="downarrow" className='ml-36 -mt-9' />
@@ -54,7 +55,7 @@ function App() {
               </div>
 
               <div className='grid grid-cols-3 gap-3 -ml-96 mr-5 mt-3'>
-                <div className='bg-white p-3 rounded-lg hover:bg-indigo-100'>
+                <div className='bg-white p-3 rounded-lg hover:bg-indigo-50 hover:border-2 hover:border-indigo-500 transition duration-200'>
                   <p className='text-gray-400 text-xs'>MEMO TODAY</p>
                   <p className='font-bold text-xl'>5,359</p>
                   <div>
@@ -62,7 +63,7 @@ function App() {
                   </div>
                   
                 </div>
-                <div className='bg-white p-3 rounded-lg hover:bg-indigo-100'>
+                <div className='bg-white p-3 rounded-lg hover:bg-indigo-50 hover:border-2 hover:border-indigo-500 transition duration-200'>
                   <p className='text-gray-400 text-xs'>MEMO COMPLETE</p>
                   <p className='font-bold text-xl'>254,633</p>
                   <div>
@@ -70,7 +71,7 @@ function App() {
                   </div>
                 
                 </div>
-                <div className='bg-white p-3 rounded-lg hover:bg-indigo-100'>
+                <div className='bg-white p-3 rounded-lg hover:bg-indigo-50 hover:border-2 hover:border-indigo-500 transition duration-200'>
                   <p className='text-gray-400 text-xs'>MEMO TOTAL</p>
                   <p className='font-bold text-xl'>270,763</p>
                   <div>

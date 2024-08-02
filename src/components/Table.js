@@ -33,7 +33,7 @@ function Table() {
               <th className="py-3 px-6 text-center">STATUS</th>
             </tr>
           </thead>
-          <tbody className="text-black text-sm font-light">
+          <tbody className="text-black text-sm font-medium">
             {data.map((item) => (
               <tr className="border-b border-gray-200 hover:bg-gray-100" key={item.no}>
                 <td className="py-3 px-6 text-left">{item.no}</td>
