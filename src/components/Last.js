@@ -19,8 +19,8 @@ export default function Last() {
                             <h1 className='font-bold text-2xl'>10,542</h1>
                             <p className='text-sm text-gray-500'>Total video and article Updated weekly</p>
                         </div>
-                        <div className='ml-5 mt-7 border border-gray-300 rounded-lg mr-7 hover:bg-gray-100'>
-                            <button className='relative mt-2 mr-9 '>Learn more <img src={Exit} alt="exit" className='-mt-5 ml-24' /></button>
+                        <div className='ml-3 mt-7 border border-gray-300 rounded-lg mr-5 hover:bg-gray-100'>
+                            <button className='relative mt-2 mr-5 '>Learn more <img src={Exit} alt="exit" className='-mt-5 ml-28' /></button>
                         </div>
                     </div>
 
