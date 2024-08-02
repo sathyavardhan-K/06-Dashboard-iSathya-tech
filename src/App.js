@@ -25,7 +25,7 @@ function App() {
             <h1 className='text-indigo-600 font-bold text-xl mt-3'>iSathya Tech</h1>
             
             </div>
-            <button><h1 className='text-white bg-indigo-600 mt-3 ml-3 w-64 p-3 rounded-lg'>+ New Memo</h1></button>
+            <button><h1 className='text-white bg-indigo-600 mt-3 ml-3 w-64 p-3 rounded-lg hover:bg-indigo-700'>+ New Memo</h1></button>
             <Sidenav/>
           </div>
           

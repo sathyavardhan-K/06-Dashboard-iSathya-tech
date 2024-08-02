@@ -12,7 +12,7 @@ import Logout from '../images/logout.svg';
 export default function Sidenav() {
     return(
         <>
-        <div className='ml-3 mt-3'>
+        <div className='ml-3 mt-5'>
             <h1 className='text-gray-500'>Menu</h1>
             <ul className='ml-5 mt-3'>
                 <div className='flex flex-row border-b-0 hover:bg-gray-100 p-3 w-56 rounded-lg mb-3 h-10 cursor-pointer'>
@@ -35,7 +35,7 @@ export default function Sidenav() {
                     <li className='ml-2 -mt-1'>My CC</li>
                 </div>
 
-                <div className='flex flex-row border-b-0 hover:bg-gray-100 p-3 w-56 rounded-lg mb-3 h-10 cursor-pointer'>
+                <div className='flex flex-row border-b-0 hover:bg-gray-100 p-3 w-56 rounded-lg mb-5 h-10 cursor-pointer'>
                     <img src={business} alt="business"/>
                     <li className='ml-2 -mt-1'>Business Unit</li>
                 </div>

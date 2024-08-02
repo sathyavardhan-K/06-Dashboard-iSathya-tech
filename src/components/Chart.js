@@ -1,6 +1,7 @@
+//user visits uv 
+//page views pv
 import React from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
-// import './App.css';
 
 const data = [
   { name: 'Jan', uv: 4000, pv: 2400, amt: 2400 },
@@ -19,10 +20,14 @@ const data = [
 
 function CustomTooltip({ payload, label, active }) {
   if (active && payload && payload.length) {
+    const uv = payload.find(item => item.dataKey === 'uv')?.value || 0;
+    const pv = payload.find(item => item.dataKey === 'pv')?.value || 0;
+
     return (
       <div className="bg-white p-2 rounded shadow">
-        <p className="text-gray-700 font-semibold">{`${label} 2024`}</p>
-        <p className="text-purple-600">{payload[0].value.toLocaleString()}</p>
+        <p className="text-gray-400">{`${label} 2024`}</p>
+        <p className="text-black font-bold">UV: {uv.toLocaleString()}</p>
+        <p className="text-black font-bold">PV: {pv.toLocaleString()}</p>
       </div>
     );
   }
@@ -33,7 +38,7 @@ function CustomTooltip({ payload, label, active }) {
 function Chart() {
   return (
     <div className="flex flex-col items-center justify-center h-96 bg-white p-5 rounded-xl">
-      <header className="w-full max-w-2xl bg-white p-4 rounded-lg  mb-3 flex justify-between items-center">
+      <header className="w-full max-w-2xl bg-white p-4 rounded-lg mb-3 flex justify-between items-center">
         <h1 className="text-lg font-semibold text-gray-800">Memo Report</h1>
         <div className="flex gap-2">
           <button className="px-2 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300">12 Months</button>
@@ -52,15 +57,20 @@ function Chart() {
         >
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
+              <stop offset="5%" stopColor="#4f46e5" stopOpacity={0.5}/>
+              <stop offset="95%" stopColor="#4f46e5" stopOpacity={0}/>
+            </linearGradient>
+            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#4f46e5" stopOpacity={0.5}/>
+              <stop offset="95%" stopColor="#4f46e5" stopOpacity={0}/>
             </linearGradient>
           </defs>
           <XAxis dataKey="name" />
           <YAxis />
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip content={<CustomTooltip />} />
-          <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
+          <Area type="monotone" dataKey="uv" stroke="#4f46e5" fillOpacity={1} fill="url(#colorUv)" />
+          <Area type="monotone" dataKey="pv" stroke="#4f46e5" fillOpacity={1} fill="url(#colorPv)" />
           <Legend verticalAlign="top" height={36} />
         </AreaChart>
       </ResponsiveContainer>
